@@ -15,3 +15,5 @@ def signup(request):
    if request.method == 'POST':  
       form = SignupForm(request.POST)  
       if form.is_valid():  
+         #pick up from here
+         
