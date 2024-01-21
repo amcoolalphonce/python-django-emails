@@ -15,5 +15,6 @@ def signup(request):
    if request.method == 'POST':  
       form = SignupForm(request.POST)  
       if form.is_valid():  
-         #pick up from here
-         
+         user = form.save(commit=False)   #save it memory and not database
+         user.is_active = False  
+         user.save()
